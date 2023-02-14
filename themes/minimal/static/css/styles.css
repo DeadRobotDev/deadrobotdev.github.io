@@ -1,0 +1,16 @@
+* {
+	font-family: monospace;
+	font-size: 16px;
+}
+
+html {
+	width: 800px;
+	max-width: 100ch;
+	margin: 0 auto;
+}
+
+header {
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+}
