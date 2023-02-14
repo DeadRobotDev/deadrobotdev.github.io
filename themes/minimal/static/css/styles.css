@@ -9,6 +9,12 @@ html {
 	margin: 0 auto;
 }
 
+@media (max-width: 800px) {
+	html {
+		width: 100%;
+	}
+}
+
 header {
 	font-weight: bold;
 	text-transform: uppercase;
