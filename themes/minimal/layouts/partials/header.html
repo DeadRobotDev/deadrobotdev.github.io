@@ -1,4 +1,11 @@
 <header>
-	<p>{{ .Site.Title }}</p>
-	<hr>
+	<div style="display:inline-block">
+		<a href="/"><span>{{ .Site.Title }}</span></a>
+		<hr>
+		<nav>
+			{{ range .Site.Menus.main }}
+			<a href="{{ .URL }}"><span>{{ .Name }}</span></a>
+			{{ end }}
+		</nav>
+	</div>
 </header>
