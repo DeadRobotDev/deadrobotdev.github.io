@@ -1,0 +1,31 @@
+* {
+	font-family: monospace;
+}
+
+html {
+	width: 800px;
+	max-width: 100ch;
+	margin: 0 auto;
+	font-size: 16px;
+}
+
+@media (max-width: 800px) {
+	html {
+		width: 100%;
+	}
+}
+
+header {
+	font-weight: bold;
+	font-size: 18px;
+	text-align: center;
+}
+
+a {
+	color: black;
+}
+
+header a {
+	text-transform: uppercase;
+	text-decoration: none;
+}
