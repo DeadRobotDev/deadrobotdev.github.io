@@ -7,12 +7,13 @@
 	--blue-600: #B1DDF9;
 	--blue-700: #A4D7F8;
 	--blue-800: #97D1F7;
-	--code-indent: 4ch;
+	--indent: 2ch;
+	--wrap-indent: 4ch;
 }
 
 * {
-	font-family: monospace;
 	font-size: 16px;
+	font-family: monospace;
 }
 
 html {
@@ -20,6 +21,10 @@ html {
 	width: 800px;
 	max-width: 100ch;
 	margin: 0 auto;
+	/* For tablet / mobile devices. */
+	padding-left: 2%;
+	/* Account for the scrollbar. */
+	padding-right: 3%;
 }
 
 @media (max-width: 800px) {
@@ -34,19 +39,20 @@ header {
 }
 
 h1,
-.header {
+p.header {
 	margin: 0;
 	font-weight: bold;
 	text-transform: uppercase;
 }
 
-p {
+p,
+ol,
+pre {
 	margin: 1em 0;
-	line-height: 1.5em;
 }
 
 a {
-	color: black;
+	color: inherit;
 	font-weight: bold;
 }
 
@@ -55,12 +61,12 @@ header a {
 }
 
 img {
-	max-width: 100%;
+	border: 1px solid black;
 }
 
 pre {
 	background: white;
-	padding: 1em 2ch;
+	padding: 1em var(--indent);
 	/* Make preformatted text wrap.
 	 * Source: https://css-tricks.com/snippets/css/make-pre-text-wrap/ */
 	white-space: pre-wrap;
@@ -72,8 +78,8 @@ pre {
 
 div.highlight pre {
 	/* Indent wrapped code. */
-	padding: 1em calc(2ch + var(--code-indent));
-	text-indent: calc(-1 * var(--code-indent));
+	padding: 1em calc(var(--indent) + var(--wrap-indent));
+	text-indent: calc(-1 * var(--wrap-indent));
 }
 
 code {
@@ -92,6 +98,6 @@ ol.content-list {
 	padding: 0;
 }
 
-li.content-list-item {
+ol.content-list > li {
 	list-style: none;
 }
