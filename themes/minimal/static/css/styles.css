@@ -1,13 +1,25 @@
+:root {
+	--blue-100: #F2F9FE;
+	--blue-200: #E5F4FD;
+	--blue-300: #D8EEFC;
+	--blue-400: #CBE8FB;
+	--blue-500: #BEE2FA;
+	--blue-600: #B1DDF9;
+	--blue-700: #A4D7F8;
+	--blue-800: #97D1F7;
+	--code-indent: 4ch;
+}
+
 * {
 	font-family: monospace;
+	font-size: 16px;
 }
 
 html {
-	background: #CBE8FB;
+	background: var(--blue-400);
 	width: 800px;
 	max-width: 100ch;
 	margin: 0 auto;
-	font-size: 16px;
 }
 
 @media (max-width: 800px) {
@@ -18,8 +30,18 @@ html {
 
 header {
 	font-weight: bold;
-	font-size: 18px;
+	text-transform: uppercase;
 	text-align: center;
+}
+
+h1 {
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+p {
+	margin: 1em 0;
+	line-height: 1.5em;
 }
 
 a {
@@ -27,6 +49,38 @@ a {
 }
 
 header a {
-	text-transform: uppercase;
 	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+pre {
+	background: white;
+	padding: 1em 2ch;
+	/* Make preformatted text wrap.
+	 * Source: https://css-tricks.com/snippets/css/make-pre-text-wrap/ */
+	white-space: pre-wrap;
+	white-space: -moz-pre-wrap;
+	white-space: -pre-wrap;
+	white-space: -o-pre-wrap;
+	word-wrap: break-word;
+}
+
+div.highlight pre {
+	/* Indent wrapped code. */
+	padding: 1em calc(2ch + var(--code-indent));
+	text-indent: calc(-1 * var(--code-indent));
+}
+
+code {
+	background: white;
+	border: 1px solid black;
+	padding: 0.25em 1ch;
+}
+
+pre code {
+	border: none;
+	padding: 0;
 }
