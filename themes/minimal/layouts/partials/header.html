@@ -1,9 +1,9 @@
 <header>
 	<div style="display:inline-block">
-		<a href="/"><span>{{ .Site.Title }}</span></a>
+		<a href="/"><span>{{ site.Title }}</span></a>
 		<hr>
 		<nav>
-			{{ range .Site.Menus.main }}
+			{{ range site.Menus.main }}
 			<a href="{{ .URL }}"><span>{{ .Title }}</span></a>
 			{{ end }}
 		</nav>
