@@ -12,9 +12,11 @@
 }
 
 /* Allow percentage-based heights. */
+/*
 html, body {
 	height: 100%;
 }
+*/
 
 /* Add accessible line-height. */
 body {
