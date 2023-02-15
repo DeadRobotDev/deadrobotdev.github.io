@@ -1,3 +1,15 @@
 {{ define "main" }}
 {{ .Content }}
+{{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+{{ if gt (len $pages) 0 }}
+<p class="header">Articles</p>
+<hr>
+<ol class="content-list">
+	{{ range $pages.ByPublishDate }}
+	<li class="content-list-item">
+		{{ .PublishDate | time.Format "2006-02-01" }}: <a href="{{ .Permalink }}">{{ .Title }}</a>
+	</li>
+	{{ end }}
+</ol>
+{{ end }}
 {{ end }}

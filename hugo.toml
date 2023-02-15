@@ -2,3 +2,5 @@ baseURL = "https://deadrobotdev.github.io/"
 languageCode = "en-GB"
 theme = "minimal"
 title = "DeadRobotDev's Website"
+[params]
+	mainSections = ["posts"]

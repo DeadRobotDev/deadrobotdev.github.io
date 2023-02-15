@@ -29,12 +29,13 @@ html {
 }
 
 header {
-	font-weight: bold;
 	text-transform: uppercase;
 	text-align: center;
 }
 
-h1 {
+h1,
+.header {
+	margin: 0;
 	font-weight: bold;
 	text-transform: uppercase;
 }
@@ -46,6 +47,7 @@ p {
 
 a {
 	color: black;
+	font-weight: bold;
 }
 
 header a {
@@ -81,6 +83,15 @@ code {
 }
 
 pre code {
+	/* Disable white box on first and last line of highlighted code block. */
 	border: none;
 	padding: 0;
+}
+
+ol.content-list {
+	padding: 0;
+}
+
+li.content-list-item {
+	list-style: none;
 }
