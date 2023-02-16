@@ -22,14 +22,14 @@ html {
 	max-width: 100ch;
 	margin: 0 auto;
 	/* For tablet / mobile devices. */
-	padding-left: 2%;
 	/* Account for the scrollbar. */
-	padding-right: 3%;
 }
 
 @media (max-width: 800px) {
 	html {
 		width: 100%;
+		padding-left: 2%;
+		padding-right: 3%;
 	}
 }
 
