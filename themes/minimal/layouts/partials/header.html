@@ -2,10 +2,12 @@
 	<div style="display:inline-block">
 		<a href="/"><span>{{ site.Title }}</span></a>
 		<hr>
+		{{ with site.Menus.main }}
 		<nav>
-			{{ range site.Menus.main }}
+			{{ range . }}
 			<a href="{{ .URL }}"><span>{{ .Title }}</span></a>
 			{{ end }}
 		</nav>
+		{{ end }}
 	</div>
 </header>
