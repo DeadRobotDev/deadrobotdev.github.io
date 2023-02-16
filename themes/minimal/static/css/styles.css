@@ -99,8 +99,5 @@ pre code {
 
 ol.content-list {
 	padding: 0;
-}
-
-ol.content-list > li {
 	list-style: none;
 }
