@@ -1,11 +1,11 @@
-<header>
+<header class="mx-1 text-center uppercase">
 	<div style="display:inline-block">
-		<a href="/"><span>{{ site.Title }}</span></a>
+		<a class="no-underline" href="/"><span>{{ site.Title }}</span></a>
 		<hr>
 		{{ with site.Menus.main }}
 		<nav>
 			{{ range . }}
-			<a href="{{ .URL }}"><span>{{ .Title }}</span></a>
+			<a class="no-underline" href="{{ .URL }}"><span>{{ .Title }}</span></a>
 			{{ end }}
 		</nav>
 		{{ end }}
