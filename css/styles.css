@@ -84,6 +84,23 @@ pre code {
 	padding: 0;
 }
 
+.journal-block {
+	border: 1px solid black;
+}
+
+.journal-date {
+	background: var(--blue-600);
+}
+
+.journal-post {
+	display: grid;
+	grid-template-columns: max-content auto;
+}
+
+.journal-time {
+	background: var(--blue-500);
+}
+
 .m-0 {
 	margin: 0;
 }
@@ -99,6 +116,15 @@ pre code {
 
 .p-0 {
 	padding: 0;
+}
+
+.p-1 {
+	padding: 1em;
+}
+
+.py-1 {
+	padding-left: 1em;
+	padding-right: 1em;
 }
 
 .font-bold {
