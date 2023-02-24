@@ -1,3 +1,6 @@
 {{ define "main" }}
+<p>{{ .PublishDate | time.Format "January 2, 2006" }}</p>
+<h1>{{ .Title }}</h1>
+<hr>
 {{ .Content }}
 {{ end }}
