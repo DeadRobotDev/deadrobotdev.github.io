@@ -1,0 +1,27 @@
+{{ define "main" }}
+{{ $data := newScratch }}
+{{ $pages := where site.RegularPages "Section" "journal" }}
+
+{{ range $pages.ByPublishDate }}
+{{ $time := .PublishDate | time.Format "2006-02-01" }}
+{{ $data.SetInMap "dates" $time $time }}
+{{ $data.Add $time (slice .) }}
+{{ end }}
+
+{{ range sort ($data.Get "dates") "value" "desc" }}
+<div class="journal-block mx-1">
+	<p class="journal-date m-0 p-1 font-bold">{{ . }} </p>
+	{{ range $data.Get . }}
+	<div class="journal-post">
+		<div class="journal-time py-1">
+			<p>{{ .PublishDate | time.Format "03:04 PM"}}</p>
+		</div>
+		<div class="journal-content py-1">
+			{{ .Content }}
+		</div>
+	</div>
+	{{ end }}
+</div>
+{{ end }}
+
+{{ end }}
